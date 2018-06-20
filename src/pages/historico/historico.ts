@@ -1,3 +1,4 @@
+import { MiServidor } from './../../app/MiServidor.service';
 import { HistoricoService } from './../../app/historico.service';
 import { Historico } from '../../app/historico.model';
 import { Component } from '@angular/core';
@@ -6,7 +7,7 @@ import { NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'historico',
   templateUrl: 'historico.html',
-  providers: [HistoricoService]
+  providers: [HistoricoService, MiServidor]
 
 })
 export class HistoricoPage {
