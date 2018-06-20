@@ -9,7 +9,24 @@
 </ion-header>
 
 <ion-content>
-    <div id= "avatar">
-        <img width="80px" src="{{imagen}}">
+  <div id= "avatar">
+      <img width="80px" src="{{imagen}}">
+  </div>
+
+  <div *ngIf="historico">
+    <div *ngFor="let fecha of historico">
+      <ion-card>
+        <ion-card-title text-center>
+          {{fecha.date}}
+        </ion-card-title>
+        <ion-card-content>
+          {{fecha.eventID}}
+          <br>
+          {{fecha.status}}
+          <br>
+          {{fecha.comments}}
+        </ion-card-content>
+      </ion-card>
     </div>
+  </div>
 </ion-content>
